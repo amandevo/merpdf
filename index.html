@@ -101,7 +101,7 @@
                 spacing: "المسافات بين الشرائح:", margin: "هامش التجليد:", none: "بدون", right: "يمين", left: "يسار", top: "أعلى", 
                 pageFormat: "نوع الترقيم:", pagePosition: "موقع الترقيم:", formatNone: "بدون", formatNum: "1, 2, 3", formatDash: "- 1 -", formatLetter: "A, B, C", formatText: "صفحة 1",
                 posRight: "يمين", posCenter: "وسط", posLeft: "يسار",
-                watermark: "العلامة المائية (نص):", watermarkPh: "مثال: د. أحمد / قناة الطب", 
+                watermark: "العلامة المائية (إنجليزي/أرقام فقط):", watermarkPh: "مثال: Dr. Ahmed 2026", 
                 quality: "دقة الاستخراج:", standardQual: "قياسية (سريعة)", highQual: "فائقة (للطباعة)",
                 close: "حفظ الإعدادات",
                 splitTitle: "تحديد الصفحات", splitDesc: "أدخل أرقام الصفحات (مثال: 1-5, 8). اترك الحقل فارغاً لاستخراج الكل.",
@@ -119,7 +119,7 @@
                 spacing: "Spacing between slides:", margin: "Binding Margin:", none: "None", right: "Right", left: "Left", top: "Top", 
                 pageFormat: "Page Numbers:", pagePosition: "Position:", formatNone: "None", formatNum: "1, 2, 3", formatDash: "- 1 -", formatLetter: "A, B, C", formatText: "Page 1",
                 posRight: "Right", posCenter: "Center", posLeft: "Left",
-                watermark: "Watermark Text:", watermarkPh: "e.g. Dr. Ahmed / Med Channel", 
+                watermark: "Watermark (English/Numbers only):", watermarkPh: "e.g. Dr. Ahmed 2026", 
                 quality: "Extraction Quality:", standardQual: "Standard (Fast)", highQual: "High (For Printing)",
                 close: "Save Settings",
                 splitTitle: "Extract Pages", splitDesc: "Enter page range (e.g., 1-5, 8). Leave blank to extract all.",
@@ -209,7 +209,6 @@
                 return () => { clearTimeout(fadeTimer); clearTimeout(hideTimer); };
             }, []);
 
-            // Anti-Data Loss Protection
             useEffect(() => {
                 const handleBeforeUnload = (e) => {
                     if (items.length > 0 || isProcessing) {
@@ -220,7 +219,6 @@
                 return () => window.removeEventListener('beforeunload', handleBeforeUnload);
             }, [items.length, isProcessing]);
 
-            // 🔥 PERFECT FIX: Default to Tab 1 every time Manual is opened
             useEffect(() => {
                 if (showManual) setManualTab(1);
             }, [showManual]);
@@ -462,6 +460,14 @@
 
             const processMerge = async () => {
                 if(items.length === 0) return;
+                
+                // 🔥 THE WATERMARK SHIELD (Regex Validation)
+                const arabicRegex = /[\u0600-\u06FF]/;
+                if (settings.watermark && arabicRegex.test(settings.watermark)) {
+                    showNotification(isAr ? "العلامة المائية تدعم الحروف الإنجليزية والأرقام فقط" : "Watermark supports English characters and numbers only", 'error');
+                    return; 
+                }
+
                 setIsProcessing(true);
                 abortRef.current = false;
                 setProgress(0);
