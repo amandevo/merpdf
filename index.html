@@ -91,40 +91,48 @@
 
         const translations = {
             ar: {
-                title: "استوديو الدمج", fileMerge: "دمج ملفات", slideMerge: "دمج شرائح",
-                emptyTitle: "مساحة العمل فارغة", startSelect: "اختر الملفات للبدء", uploadMore: "رفع المزيد", clearAll: "تفريغ الكل", blankSlide: "إدراج فاصل",
+                title: "استوديو الدمج", fileMerge: "دمج ملفات", slideMerge: "دمج شرائح", imageMerge: "تحويل صور",
+                emptyTitle: "مساحة العمل فارغة", startSelect: "اختر الملفات للبدء", startSelectImg: "اختر الصور للبدء", uploadMore: "رفع المزيد", clearAll: "تفريغ الكل", blankSlide: "إدراج فاصل",
                 slidesPerPage: "تخطيط الصفحة:", pagesStr: "صفحة", singleSlide: "شريحة مفردة", blankNote: "ورقة ملاحظات",
                 finalFileName: "اسم الملف النهائي (يتم الالتقاط تلقائياً)", defaultName: "الملف_النهائي", mergeDownload: "دمج وإنشاء",
                 processing: "جاري المعالجة...", success: "تم بنجاح!", error: "حدث خطأ!", aborting: "تم إيقاف العملية!", abortBtn: "إيقاف العملية",
                 howItWorks: "دليل الاستديو", advSettings: "استوديو الإعدادات", 
-                secLayout: "التخطيط والطباعة", secVisuals: "الإضافات البصرية", secPerformance: "المعالجة والأداء",
+                secLayout: "التخطيط والطباعة", secVisuals: "الإضافات البصرية", secPerformance: "المعالجة والأداء", secImages: "إعدادات الصور",
                 spacing: "المسافات بين الشرائح:", margin: "هامش التجليد:", none: "بدون", right: "يمين", left: "يسار", top: "أعلى", 
                 pageFormat: "نوع الترقيم:", pagePosition: "موقع الترقيم:", formatNone: "بدون", formatNum: "1, 2, 3", formatDash: "- 1 -", formatLetter: "A, B, C", formatText: "صفحة 1",
                 posRight: "يمين", posCenter: "وسط", posLeft: "يسار",
-                watermark: "العلامة المائية (إنجليزي/أرقام فقط):", watermarkPh: "مثال: Dr. Ahmed 2026", 
+                watermark: "العلامة المائية (إنجليزي/أرقام فقط):", watermarkPh: "مثال: Dr. Ahmed", 
                 quality: "دقة الاستخراج:", standardQual: "قياسية (سريعة)", highQual: "فائقة (للطباعة)",
+                paperSize: "حجم الورقة:", autoSize: "تطابق تام (تلقائي)", a4Size: "ورقة A4", legalSize: "ورقة Legal",
+                orientation: "اتجاه الورقة:", smartOrient: "ذكي (تلقائي)", portrait: "عمودي", landscape: "أفقي",
                 close: "حفظ الإعدادات",
                 splitTitle: "تحديد الصفحات", splitDesc: "أدخل أرقام الصفحات (مثال: 1-5, 8). اترك الحقل فارغاً لاستخراج الكل.",
                 splitPh: "مثال: 1-10", extract: "استخراج", cancel: "إلغاء", blankTooltip: "أضف ورقة مسطرة فارغة للكتابة اليدوية.",
-                fileReady: "الملف جاهز!", download: "تحميل الملف", share: "مشاركة سريعة", closeResult: "إغلاق"
+                fileReady: "الملف جاهز!", download: "تحميل الملف", share: "مشاركة سريعة", closeResult: "إغلاق",
+                mixedRatioTitle: "أبعاد الصور مختلفة! ⚠️", mixedRatioDesc: "اكتشفنا صوراً بأبعاد مختلفة (طولية وعرضية). كيف تفضل ترتيبها في الملزمة؟",
+                fitToPage: "توحيد (ورقة موحدة)", exactMatch: "تطابق تام (أحجام مختلفة)"
             },
             en: {
-                title: "Merge Studio", fileMerge: "Merge Files", slideMerge: "Merge Slides",
-                emptyTitle: "Workspace is Empty", startSelect: "Select Files", uploadMore: "Upload More", clearAll: "Clear All", blankSlide: "Insert Note",
+                title: "Merge Studio", fileMerge: "Merge Files", slideMerge: "Merge Slides", imageMerge: "Images to PDF",
+                emptyTitle: "Workspace is Empty", startSelect: "Select Files", startSelectImg: "Select Images to Start", uploadMore: "Upload More", clearAll: "Clear All", blankSlide: "Insert Note",
                 slidesPerPage: "Page Layout:", pagesStr: "Pages", singleSlide: "Single Slide", blankNote: "Notes Paper",
                 finalFileName: "Final file name (Auto-detected)", defaultName: "Final_File", mergeDownload: "Merge & Generate",
                 processing: "Processing...", success: "Success!", error: "Error occurred!", aborting: "Process Aborted!", abortBtn: "Stop Process",
                 howItWorks: "Studio Guide", advSettings: "Settings Studio", 
-                secLayout: "Layout & Print", secVisuals: "Visual Overlays", secPerformance: "Processing & Performance",
+                secLayout: "Layout & Print", secVisuals: "Visual Overlays", secPerformance: "Processing & Performance", secImages: "Image Settings",
                 spacing: "Spacing between slides:", margin: "Binding Margin:", none: "None", right: "Right", left: "Left", top: "Top", 
                 pageFormat: "Page Numbers:", pagePosition: "Position:", formatNone: "None", formatNum: "1, 2, 3", formatDash: "- 1 -", formatLetter: "A, B, C", formatText: "Page 1",
                 posRight: "Right", posCenter: "Center", posLeft: "Left",
-                watermark: "Watermark (English/Numbers only):", watermarkPh: "e.g. Dr. Ahmed 2026", 
+                watermark: "Watermark (English/Numbers only):", watermarkPh: "e.g. Dr. Ahmed", 
                 quality: "Extraction Quality:", standardQual: "Standard (Fast)", highQual: "High (For Printing)",
+                paperSize: "Paper Size:", autoSize: "Exact Match (Auto)", a4Size: "A4 Paper", legalSize: "Legal Paper",
+                orientation: "Orientation:", smartOrient: "Smart (Auto)", portrait: "Portrait", landscape: "Landscape",
                 close: "Save Settings",
                 splitTitle: "Extract Pages", splitDesc: "Enter page range (e.g., 1-5, 8). Leave blank to extract all.",
                 splitPh: "e.g. 1-10", extract: "Extract", cancel: "Cancel", blankTooltip: "Add a blank lined paper for handwriting notes.",
-                fileReady: "File Ready!", download: "Download", share: "Quick Share", closeResult: "Close"
+                fileReady: "File Ready!", download: "Download", share: "Quick Share", closeResult: "Close",
+                mixedRatioTitle: "Mixed Aspect Ratios! ⚠️", mixedRatioDesc: "We detected images with different dimensions. How would you like to fit them?",
+                fitToPage: "Fit to Page", exactMatch: "Exact Match"
             }
         };
 
@@ -151,7 +159,8 @@
             Layout: () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>,
             FileText: () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>,
             Check: () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12"/></svg>,
-            Stop: () => <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/></svg>
+            Stop: () => <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/></svg>,
+                        Image: () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
         };
 
         const yieldThread = () => new Promise(resolve => setTimeout(resolve, 10));
@@ -191,11 +200,13 @@
             
             const [settings, setSettings] = useState({ 
                 filename: "", grid: 2, spacing: 5, marginType: 'none', 
-                pageFormat: 'none', pagePosition: 'posCenter', watermark: '', quality: 'high' 
+                pageFormat: 'none', pagePosition: 'posCenter', watermark: '', quality: 'high',
+                imagePaperSize: 'auto', imageOrientation: 'smart'
             });
             
             const [showSettingsDrawer, setShowSettingsDrawer] = useState(false);
             const [splitModal, setSplitModal] = useState({ isOpen: false, file: null, maxPages: 0, range: '', resolve: null });
+            const [mixedRatioModal, setMixedRatioModal] = useState({ isOpen: false, resolve: null });
 
             const fileInputRef = useRef(null);
             const dragItem = useRef();
@@ -281,9 +292,18 @@
                 if (!files || files.length === 0) return;
                 setResult(null); abortRef.current = false; setProgress(0);
                 
-                if (settings.filename === "") {
-                    const baseName = files[0].name.replace(/\.[^/.]+$/, "");
-                    setSettings(s => ({...s, filename: baseName + " 1"}));
+                                                if (settings.filename === "") {
+                    if (mode === 'images') {
+                        // خوارزمية التاريخ الذكي: YYYY-M-D
+                        const now = new Date();
+                        const dateStr = `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`;
+                        const baseName = isAr ? `مستند صور ${dateStr}` : `Images Doc ${dateStr}`;
+                        setSettings(s => ({...s, filename: baseName}));
+                    } else {
+                        // التقاط اسم أول ملف PDF مرفوع
+                        const baseName = files[0].name.replace(/\.[^/.]+$/, "");
+                        setSettings(s => ({...s, filename: baseName + " 1"}));
+                    }
                 }
 
                 for (let i = 0; i < files.length; i++) {
@@ -306,7 +326,7 @@
                             } else if (file.type.startsWith('image/')) { thumb = URL.createObjectURL(new Blob([buffer], {type: file.type})); }
                             newItems.push({ id: `file_${Date.now()}_${i}`, name: file.name, type: file.type, buffer: buffer, thumb: thumb, pagesCount: pagesCount, pageIndex: 0 });
                             setProgress(Math.round(((i + 1) / files.length) * 100));
-                        } else {
+                        } else if (mode === 'slides') {
                             if (file.type === 'application/pdf') {
                                 setIsProcessing(false); 
                                 const loadingTask = pdfjsLib.getDocument(new Uint8Array(buffer.slice(0))); 
@@ -337,34 +357,20 @@
                                 const thumb = URL.createObjectURL(new Blob([buffer], {type: file.type}));
                                 newItems.push({ id: `img_${Date.now()}_${i}`, name: file.name, type: file.type, buffer: buffer, thumb: thumb, pagesCount: 1, pageIndex: 0 });
                             }
+                        } else if (mode === 'images') {
+                            if (file.type.startsWith('image/')) {
+                                const thumb = URL.createObjectURL(new Blob([buffer], {type: file.type}));
+                                newItems.push({ id: `img_mode_${Date.now()}_${i}`, name: file.name, type: file.type, buffer: buffer, thumb: thumb, pagesCount: 1, pageIndex: 0 });
+                                setProgress(Math.round(((i + 1) / files.length) * 100));
+                            } else {
+                                showNotification(isAr ? "يرجى اختيار صور فقط في هذا الوضع" : "Please select images only in this mode", 'error');
+                            }
                         }
                         if (!abortRef.current) setItems(prev => [...prev, ...newItems]);
                     } catch (err) { showNotification(err.message, 'error'); } 
                 }
                 setIsProcessing(false); if(fileInputRef.current) fileInputRef.current.value = '';
                 if(abortRef.current) { showNotification(t.aborting, 'error'); abortRef.current = false; setProgress(0); }
-            };
-
-            const generateFileMerge = async () => {
-                const mergedPdf = await PDFDocument.create();
-                for (let i = 0; i < items.length; i++) {
-                    if (abortRef.current) throw new Error("ABORTED");
-                    setStatus(`${t.processing} ${i+1}`);
-                    setProgress(Math.round(((i + 1) / items.length) * 100));
-                    await yieldThread();
-                    
-                    const item = items[i];
-                    if (item.type === 'application/pdf') {
-                        const pdf = await PDFDocument.load(item.buffer.slice(0));
-                        const copiedPages = await mergedPdf.copyPages(pdf, pdf.getPageIndices());
-                        copiedPages.forEach((page) => mergedPdf.addPage(page));
-                    } else if (item.type.startsWith('image/')) {
-                        const image = item.type.includes('png') ? await mergedPdf.embedPng(item.buffer.slice(0)) : await mergedPdf.embedJpg(item.buffer.slice(0));
-                        const page = mergedPdf.addPage([image.width, image.height]);
-                        page.drawImage(image, { x: 0, y: 0, width: image.width, height: image.height });
-                    }
-                }
-                return await mergedPdf.save();
             };
 
             const generateGridMerge = async () => {
@@ -457,15 +463,103 @@
                     return await doc.save();
                 } finally { loadedPdfs.clear(); }
             };
+                        const generateImagesToPdf = async (finalPaperSize) => {
+                const doc = await PDFDocument.create();
+                if (settings.watermark && settings.watermark.trim() !== '') doc.registerFontkit(window.fontkit);
+
+                const a4Dims = [595.28, 841.89];
+                const legalDims = [612.00, 1008.00];
+
+                for(let i=0; i<items.length; i++) {
+                    if (abortRef.current) throw new Error("ABORTED");
+                    setStatus(`${t.processing} ${i+1}`);
+                    setProgress(Math.round(((i + 1) / items.length) * 100));
+                    await yieldThread();
+                    
+                    const item = items[i];
+                    if (item.type === 'blank') continue; // تخطي الفواصل
+
+                    const embed = item.type.includes('png') ? await doc.embedPng(item.buffer.slice(0)) : await doc.embedJpg(item.buffer.slice(0));
+                    const imgW = embed.width; const imgH = embed.height;
+                    const isLandscapeImg = imgW > imgH;
+
+                    let pW, pH;
+                    if (finalPaperSize === 'auto') {
+                        pW = imgW; pH = imgH;
+                    } else {
+                        const baseDims = finalPaperSize === 'legal' ? legalDims : a4Dims;
+                        if (settings.imageOrientation === 'smart') {
+                            if (isLandscapeImg) { pW = Math.max(...baseDims); pH = Math.min(...baseDims); }
+                            else { pW = Math.min(...baseDims); pH = Math.max(...baseDims); }
+                        } else if (settings.imageOrientation === 'landscape') {
+                            pW = Math.max(...baseDims); pH = Math.min(...baseDims);
+                        } else {
+                            pW = Math.min(...baseDims); pH = Math.max(...baseDims);
+                        }
+                    }
+
+                    const page = doc.addPage([pW, pH]);
+                    
+                    // حسابات التوسيط الذكية بدون تشوه
+                    if (finalPaperSize === 'auto') {
+                        page.drawImage(embed, {x: 0, y: 0, width: pW, height: pH});
+                    } else {
+                        // ترك هوامش بسيطة للملاحظات والجمالية
+                        const margin = 20; 
+                        const safeW = pW - (margin * 2);
+                        const safeH = pH - (margin * 2);
+                        const scale = Math.min(safeW / imgW, safeH / imgH);
+                        const finalW = imgW * scale;
+                        const finalH = imgH * scale;
+                        const x = (pW - finalW) / 2;
+                        const y = (pH - finalH) / 2;
+                        page.drawImage(embed, {x, y, width: finalW, height: finalH});
+                    }
+
+                    // وضع العلامة المائية والترقيم
+                    if (settings.watermark && settings.watermark.trim() !== '') {
+                        page.drawText(settings.watermark, { x: pW / 4, y: pH / 3, size: 40, opacity: 0.15, rotate: degrees(45), color: rgb(0,0,0) });
+                    }
+                    if (settings.pageFormat !== 'none') {
+                        let px = pW / 2 - 5, py = 15;
+                        if (settings.pagePosition === 'posRight') px = pW - 40;
+                        else if (settings.pagePosition === 'posLeft') px = 20;
+                        let pageText = String(i + 1);
+                        if (settings.pageFormat === 'dash') pageText = `- ${i + 1} -`;
+                        else if (settings.pageFormat === 'letter') pageText = String.fromCharCode(65 + (i % 26));
+                        else if (settings.pageFormat === 'text') pageText = isAr ? `صفحة ${i + 1}` : `Page ${i + 1}`;
+                        page.drawText(pageText, { x: px, y: py, size: 12, color: rgb(0.3, 0.3, 0.3) });
+                    }
+                }
+                return await doc.save();
+            };
 
             const processMerge = async () => {
                 if(items.length === 0) return;
                 
-                // 🔥 THE WATERMARK SHIELD (Regex Validation)
                 const arabicRegex = /[\u0600-\u06FF]/;
                 if (settings.watermark && arabicRegex.test(settings.watermark)) {
                     showNotification(isAr ? "العلامة المائية تدعم الحروف الإنجليزية والأرقام فقط" : "Watermark supports English characters and numbers only", 'error');
                     return; 
+                }
+
+                // مستشعر اختلاف أبعاد الصور (The Smart Prompt)
+                let chosenImageSize = settings.imagePaperSize;
+                if (mode === 'images' && settings.imagePaperSize !== 'auto') {
+                    let firstType = null; let isMixed = false;
+                    for(let i=0; i<items.length; i++){
+                        if(items[i].type === 'blank') continue;
+                        const img = new Image(); img.src = items[i].thumb;
+                        await new Promise(res => { img.onload = res; });
+                        const type = img.width > img.height ? 'landscape' : 'portrait';
+                        if (firstType === null) firstType = type;
+                        else if (firstType !== type) { isMixed = true; break; }
+                    }
+                    if (isMixed) {
+                        const userChoice = await new Promise(resolve => setMixedRatioModal({ isOpen: true, resolve }));
+                        if (userChoice === 'cancel') return;
+                        if (userChoice === 'auto') chosenImageSize = 'auto';
+                    }
                 }
 
                 setIsProcessing(true);
@@ -474,7 +568,8 @@
                 try {
                     let pdfBytes;
                     if (mode === 'files') pdfBytes = await generateFileMerge();
-                    else pdfBytes = await generateGridMerge();
+                    else if (mode === 'slides') pdfBytes = await generateGridMerge();
+                    else pdfBytes = await generateImagesToPdf(chosenImageSize); // تشغيل محرك الصور الذكي
 
                     const blob = new Blob([pdfBytes], { type: 'application/pdf' });
                     const baseName = (settings.filename.trim() || t.defaultName).replace(/\.pdf$/i, '');
@@ -548,7 +643,7 @@
                                 <Icons.FileMerge />
                             </div>
                             <h1 className="text-4xl font-black text-white slide-up tracking-tight" style={{animationDelay: '0.2s'}}>Merge <span className="text-blue-500">Studio</span></h1>
-                            <p className="text-blue-400 font-bold mt-2 slide-up tracking-widest text-sm uppercase" style={{animationDelay: '0.3s'}}>v3.1.0 Final</p>
+                            <p className="text-blue-400 font-bold mt-2 slide-up tracking-widest text-sm uppercase" style={{animationDelay: '0.3s'}}>v3.2.0 Final</p>
                         </div>
                     )}
 
@@ -616,6 +711,9 @@
                                                 <ManualItem icon={<Icons.FileMerge />} title={isAr ? "وضع (دمج شرائح)" : "Merge Slides Mode"}>
                                                     {isAr ? "يأخذ ملف PDF الخاص بك، ويفككه إلى شرائح مفردة (صورة صورة). لتتمكن من ترتيبها أو دمج عدة شرائح في ورقة A4 واحدة." : "Extracts your PDF into single slides so you can arrange them or merge multiple slides onto one A4 page."}
                                                 </ManualItem>
+                                                                                                <ManualItem icon={<Icons.Image />} title={isAr ? "وضع (تحويل صور)" : "Images to PDF Mode"}>
+                                                    {isAr ? <span>ارفع صور الملخصات أو شاشات العرض، وسيقوم الاستديو بدمجها في ملزمة PDF واحدة. مع ميزة <span className="text-blue-600 dark:text-blue-400 font-bold bg-blue-100 dark:bg-blue-900/40 px-1 rounded">الطابعة الذكية</span> في الإعدادات لمنع تشوه أبعاد الصور!</span> : <span>Upload photos of notes or projectors, and the studio will merge them into a single PDF. Features a Smart Printer to prevent image distortion!</span>}
+                                                </ManualItem>
                                                 <ManualItem icon={<Icons.Trash />} title={isAr ? "زر (تفريغ الكل)" : "Clear All Button"}>
                                                     {isAr ? "يمسح مساحة العمل بالكامل والذاكرة المؤقتة لتبدأ مشروعاً جديداً بضغطة زر." : "Clears the workspace and cache entirely to start a fresh project instantly."}
                                                 </ManualItem>
@@ -654,6 +752,9 @@
                                                 </ManualItem>
                                                 <ManualItem icon={<Icons.FileText />} title={isAr ? "الترقيم والعلامة المائية" : "Pagination & Watermark"}>
                                                     {isAr ? "أضف أرقاماً للصفحات بأشكال احترافية (1, A, صفحة 1). واكتب اسمك كعلامة مائية شفافة لضمان حقوقك الفكرية." : "Add page numbers in various formats. Write your name as a watermark to protect your property."}
+                                                </ManualItem>
+                                                                                                <ManualItem icon={<Icons.Image />} title={isAr ? "الطابعة الذكية (للصور)" : "Smart Printer (Images)"}>
+                                                    {isAr ? "في وضع تحويل الصور، يمكنك اختيار حجم الورقة (A4 أو Legal) أو تركها تتطابق مع الصورة تماماً. وسيقوم النظام بضبط الاتجاه (عمودي/أفقي) بذكاء لمنع أي تشوه في الملخصات!" : "In image mode, choose paper size (A4, Legal, or Exact Match). The system smartly auto-adjusts orientation to prevent any distortion in your notes!"}
                                                 </ManualItem>
                                                 <ManualItem icon={<Icons.CheckCircle />} title={isAr ? "دقة الاستخراج" : "Extraction Quality"}>
                                                     {isAr ? <span>اختر <span className="text-blue-600 dark:text-blue-400 font-bold bg-blue-100 dark:bg-blue-900/40 px-1 rounded">الدقة الفائقة</span> للحصول على طباعة طبية واضحة جداً للصور، أو اختر <span className="text-slate-500 font-bold">القياسية</span> لسرعة الدمج وتقليل حجم الملف النهائي.</span> : <span>Choose High Quality for crisp medical printing, or Standard for fast merging and smaller files.</span>}
@@ -695,6 +796,20 @@
                             </button>
                         </div>
                     )}
+                    
+                    {mixedRatioModal.isOpen && (
+                        <div className="fixed inset-0 z-[130] bg-slate-900/80 backdrop-blur-md flex items-center justify-center p-4">
+                            <div className="bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-2xl max-w-sm w-full border border-slate-200 dark:border-slate-700 slide-up">
+                                <h3 className="text-lg font-black mb-2 dark:text-white flex items-center gap-2"><Icons.AlertCircle /> {t.mixedRatioTitle}</h3>
+                                <p className="text-sm text-slate-500 dark:text-slate-400 mb-6 leading-relaxed">{t.mixedRatioDesc}</p>
+                                <div className="flex flex-col gap-3">
+                                    <button onClick={() => { setMixedRatioModal({ isOpen: false, resolve: null }); mixedRatioModal.resolve('settings'); }} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl transition shadow-md">{t.fitToPage}</button>
+                                    <button onClick={() => { setMixedRatioModal({ isOpen: false, resolve: null }); mixedRatioModal.resolve('auto'); }} className="w-full bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 font-bold py-3.5 rounded-xl transition">{t.exactMatch}</button>
+                                    <button onClick={() => { setMixedRatioModal({ isOpen: false, resolve: null }); mixedRatioModal.resolve('cancel'); }} className="w-full mt-2 text-sm text-slate-400 hover:text-red-500 transition">{t.cancel}</button>
+                                </div>
+                            </div>
+                        </div>
+                    )}
 
                     {splitModal.isOpen && (
                         <div className="fixed inset-0 z-[110] bg-slate-900/80 backdrop-blur-md flex items-center justify-center p-4">
@@ -721,6 +836,37 @@
                                 </div>
                                 
                                 <div className="flex-1 overflow-y-auto p-6 pb-28">
+                                                                                                     {mode === 'images' && (
+                                        <div className="mb-8 slide-up">
+                                            <h4 className="text-[10px] font-black text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-5 flex items-center gap-1"><Icons.Image /> {t.secImages}</h4>
+                                            <div className="space-y-6">
+                                                <div>
+                                                    <label className="text-xs font-bold text-slate-500 dark:text-slate-400 block mb-3">{t.paperSize}</label>
+                                                    <div className="flex flex-col sm:flex-row gap-2">
+                                                        {['auto', 'a4', 'legal'].map(sz => (
+                                                            <button key={sz} onClick={() => setSettings({...settings, imagePaperSize: sz})} className={`flex-1 py-2.5 text-[11px] font-bold rounded-xl transition-all ${settings.imagePaperSize === sz ? 'bg-slate-800 dark:bg-blue-600 text-white shadow-md' : 'bg-slate-100 dark:bg-slate-900/50 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700'}`}>
+                                                                {t[`${sz}Size`]}
+                                                            </button>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                                {settings.imagePaperSize !== 'auto' && (
+                                                    <div className="slide-up">
+                                                        <label className="text-xs font-bold text-slate-500 dark:text-slate-400 block mb-3">{t.orientation}</label>
+                                                        <div className="flex gap-2">
+                                                            {['smart', 'portrait', 'landscape'].map(ori => (
+                                                                <button key={ori} onClick={() => setSettings({...settings, imageOrientation: ori})} className={`flex-1 py-2.5 text-[11px] font-bold rounded-xl transition-all ${settings.imageOrientation === ori ? 'bg-slate-800 dark:bg-blue-600 text-white shadow-md' : 'bg-slate-100 dark:bg-slate-900/50 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700'}`}>
+                                                                    {t[ori === 'smart' ? 'smartOrient' : ori]}
+                                                                </button>
+                                                            ))}
+                                                        </div>
+                                                    </div>
+                                                )}
+                                            </div>
+                                            <hr className="border-slate-100 dark:border-slate-700/50 mt-8" />
+                                        </div>
+                                    )}
+
                                     <div className="mb-2">
                                         <h4 className="text-[10px] font-black text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-5">{t.secLayout}</h4>
                                         <div className="space-y-6">
@@ -808,9 +954,10 @@
                             </div>
                         </div>
                         
-                        <div className="flex bg-slate-100 dark:bg-slate-800 p-1.5 rounded-2xl w-full md:w-auto relative border border-slate-200 dark:border-slate-700/50">
-                            <button onClick={() => setMode('files')} className={`flex-1 md:w-40 py-2.5 text-sm font-bold rounded-xl flex items-center justify-center gap-2 transition-all duration-300 ${mode === 'files' ? 'bg-white dark:bg-slate-700 shadow-sm text-blue-600 dark:text-blue-400' : 'text-slate-500 dark:text-slate-400'}`}><Icons.FileMerge /> {t.fileMerge}</button>
-                            <button onClick={() => setMode('slides')} className={`flex-1 md:w-40 py-2.5 text-sm font-bold rounded-xl flex items-center justify-center gap-2 transition-all duration-300 ${mode === 'slides' ? 'bg-white dark:bg-slate-700 shadow-sm text-blue-600 dark:text-blue-400' : 'text-slate-500 dark:text-slate-400'}`}><Icons.GridMerge /> {t.slideMerge}</button>
+                        <div className="flex bg-slate-100 dark:bg-slate-800 p-1.5 rounded-2xl w-full md:w-auto relative border border-slate-200 dark:border-slate-700/50 overflow-x-auto scrollbar-hide">
+                            <button onClick={() => setMode('files')} className={`flex-1 md:w-36 py-2.5 px-3 text-sm font-bold rounded-xl flex items-center justify-center gap-1.5 transition-all duration-300 whitespace-nowrap ${mode === 'files' ? 'bg-white dark:bg-slate-700 shadow-sm text-blue-600 dark:text-blue-400' : 'text-slate-500 dark:text-slate-400'}`}><Icons.FileMerge /> {t.fileMerge}</button>
+                            <button onClick={() => setMode('slides')} className={`flex-1 md:w-36 py-2.5 px-3 text-sm font-bold rounded-xl flex items-center justify-center gap-1.5 transition-all duration-300 whitespace-nowrap ${mode === 'slides' ? 'bg-white dark:bg-slate-700 shadow-sm text-blue-600 dark:text-blue-400' : 'text-slate-500 dark:text-slate-400'}`}><Icons.GridMerge /> {t.slideMerge}</button>
+                            <button onClick={() => setMode('images')} className={`flex-1 md:w-36 py-2.5 px-3 text-sm font-bold rounded-xl flex items-center justify-center gap-1.5 transition-all duration-300 whitespace-nowrap ${mode === 'images' ? 'bg-white dark:bg-slate-700 shadow-sm text-blue-600 dark:text-blue-400' : 'text-slate-500 dark:text-slate-400'}`}><Icons.Image /> {t.imageMerge}</button>
                         </div>
 
                         <div className="hidden md:flex items-center gap-2">
@@ -876,10 +1023,9 @@
                                 </button>
                             )}
                         </div>
-                        
-                        {items.length === 0 && !isProcessing && (
+                                         {items.length === 0 && !isProcessing && (
                             <div className="flex justify-center mt-12">
-                                <button onClick={() => fileInputRef.current.click()} className="bg-blue-600 text-white px-10 py-4 rounded-2xl font-bold shadow-xl shadow-blue-500/20 hover:shadow-2xl hover:bg-blue-700 hover:-translate-y-1 transition-all">{t.startSelect}</button>
+                                <button onClick={() => fileInputRef.current.click()} className="bg-blue-600 text-white px-10 py-4 rounded-2xl font-bold shadow-xl shadow-blue-500/20 hover:shadow-2xl hover:bg-blue-700 hover:-translate-y-1 transition-all">{mode === 'images' ? t.startSelectImg : t.startSelect}</button>
                             </div>
                         )}
 
@@ -893,7 +1039,7 @@
                                     <div className="flex flex-col sm:flex-row items-center gap-3 fade-in">
                                         <div className="flex-1 flex gap-2 w-full relative">
                                             <input type="text" placeholder={t.finalFileName} value={settings.filename} onChange={(e) => setSettings({...settings, filename: e.target.value})} className="flex-1 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 dark:text-white rounded-xl p-3.5 text-sm font-bold focus:ring-2 focus:ring-blue-500 outline-none transition-shadow" />
-                                            {mode === 'slides' && (
+                                            {(mode === 'slides' || mode === 'images') && (
                                                 <button onClick={() => setShowSettingsDrawer(true)} className="bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-3.5 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition shadow-sm hover:shadow"><Icons.Settings /></button>
                                             )}
                                         </div>
@@ -930,3 +1076,4 @@
     </script>
 </body>
 </html>
+
