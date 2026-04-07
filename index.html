@@ -388,6 +388,29 @@
                 setIsProcessing(false); if(fileInputRef.current) fileInputRef.current.value = '';
                 if(abortRef.current) { showNotification(t.aborting, 'error'); abortRef.current = false; setProgress(0); }
             };
+            const generateFileMerge = async () => {
+                const doc = await PDFDocument.create();
+                for (let i = 0; i < items.length; i++) {
+                    if (abortRef.current) throw new Error("ABORTED");
+                    setStatus(`${t.processing} ${i + 1}`);
+                    setProgress(Math.round(((i + 1) / items.length) * 100));
+                    await yieldThread();
+
+                    const item = items[i];
+                    if (item.type === 'blank') continue;
+
+                    if (item.type === 'application/pdf') {
+                        const srcDoc = await PDFDocument.load(item.buffer.slice(0));
+                        const copiedPages = await doc.copyPages(srcDoc, srcDoc.getPageIndices());
+                        copiedPages.forEach((page) => doc.addPage(page));
+                    } else if (item.type && item.type.startsWith('image/')) {
+                        const imgEmbed = item.type.includes('png') ? await doc.embedPng(item.buffer.slice(0)) : await doc.embedJpg(item.buffer.slice(0));
+                        const page = doc.addPage([imgEmbed.width, imgEmbed.height]);
+                        page.drawImage(imgEmbed, { x: 0, y: 0, width: imgEmbed.width, height: imgEmbed.height });
+                    }
+                }
+                return await doc.save();
+            };
 
             const generateGridMerge = async () => {
                 const doc = await PDFDocument.create();
