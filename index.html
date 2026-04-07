@@ -493,8 +493,8 @@
                             let pageText = String(idx + 1);
                             if (settings.pageFormat === 'dash') pageText = `- ${idx + 1} -`;
                             else if (settings.pageFormat === 'letter') pageText = String.fromCharCode(65 + (idx % 26));
-                            else if (settings.pageFormat === 'text') pageText = isAr ? `صفحة ${idx + 1}` : `Page ${idx + 1}`;
-                            
+                            else if (settings.pageFormat === 'text') pageText = `Page ${idx + 1}`;
+  
                             page.drawText(pageText, { x: px, y: py, size: 12, color: rgb(0.3, 0.3, 0.3) });
                         }
                     });
@@ -566,7 +566,7 @@
                         let pageText = String(i + 1);
                         if (settings.pageFormat === 'dash') pageText = `- ${i + 1} -`;
                         else if (settings.pageFormat === 'letter') pageText = String.fromCharCode(65 + (i % 26));
-                        else if (settings.pageFormat === 'text') pageText = isAr ? `صفحة ${i + 1}` : `Page ${i + 1}`;
+                        else if (settings.pageFormat === 'text') pageText = `Page ${i + 1}`;
                         page.drawText(pageText, { x: px, y: py, size: 12, color: rgb(0.3, 0.3, 0.3) });
                     }
                 }
@@ -1169,4 +1169,3 @@
     </script>
 </body>
 </html>
-
